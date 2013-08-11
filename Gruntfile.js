@@ -11,6 +11,15 @@ module.exports = function (grunt) {
         files: {
           "dist/tachikoma.css": "tachikoma.less"
         }
+      },
+      production: {
+        options: {
+          paths: ["less"],
+          yuicompress: true
+        },
+        files: {
+          "dist/tachikoma.min.css": "tachikoma.less"
+        }
       }
     },
     connect: {
@@ -30,7 +39,7 @@ module.exports = function (grunt) {
         }
       },
       less: {
-        files: '*.less',
+        files: ['*.less', 'less/*.less'],
         tasks: ['less:development'],
         options: {
           livereload: true,

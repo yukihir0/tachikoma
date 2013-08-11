@@ -108,10 +108,8 @@ a.keyword {
 /* container */
 
 #container {
-    width: 940px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
     padding-top: 37px; // グローバルヘッダを fixed にしているため
 
     #content {
@@ -123,32 +121,25 @@ a.keyword {
     padding-top: 0; // グローバルヘッダ非表示の時
 }
 
-/* 2カラムレイアウト */
+/* 1カラムレイアウト */
 
 #main {
-    width: 600px;
-    float: left;
-}
-
-#box2 {
-    width: 300px;
-    float: right;
-}
-
-/* 1カラムにしたい場合は下記のコメントアウトを外してください ----
-
-#main {
-    width: 100%;
+    width: 960px;
+    margin: 0 auto;
     float: none;
 }
 
 #box2 {
     width: 100%;
+    padding-top: 50px;
     float: none;
+    background-color: @bg-footer;
 }
 
 #box2-inner {
     width: 960px;
+    margin: 0 auto;
+    color: #fff;
     .clearfix;
     overflow: hidden;
 }
@@ -164,11 +155,10 @@ a.keyword {
     }
 }
 
----- END 1カラム */
-
 /* header */
 
 #blog-title {
+    text-align: center;
     margin: 30px 0;
     padding: 20px 0;
 }
@@ -476,8 +466,9 @@ a.keyword {
     font-weight: bold;
     margin-bottom: 15px;
     font-size: 120%;
+    color: #fff;
     a {
-        color: @text;
+        color: #fff;
         text-decoration: none;
         &:hover {
             text-decoration: underline;
@@ -500,6 +491,9 @@ a.keyword {
         font-weight: bold;
         font-size: 110%;
         margin-bottom: 5px;
+        a{
+            color: @link;
+        }
     }
 
     .profile-description {
@@ -524,9 +518,12 @@ a.keyword {
         padding: 8px 0;
         border-bottom: 1px solid @border;
         line-height: 1.5;
+        color: @link;
 
         a {
             text-decoration: none;
+            color: @link;
+            text-decoration: underline;
         }
     }
 
@@ -546,7 +543,7 @@ a.keyword {
 
     .search-module-input {
         padding: 5px;
-        color: @text;
+        color: #fff;
         background: none;
         border: none;
         outline: none;
@@ -606,7 +603,7 @@ a.keyword {
     color: @text-light;
     line-height: 1.5;
     font-size: 80%;
-
+    background-color: @bg-footer;
     p {
         margin: 0;
     }
@@ -668,7 +665,42 @@ a.keyword {
 
 }
 
-
-
 /*  import media queries */
 @import "less/_media-queries.less";
+
+
+/* Syntax-Highlight */
+pre.code {
+    font-size: 85%;
+    color: @text-code;
+    background-color: @bg-code;
+}
+
+span.synSpecial {
+//    color: #fff;
+}
+
+span.synPreProc {
+//    color: #f69;
+}
+
+span.synStatement {
+//    color: #00ffff;
+}
+
+span.synIdentifier {
+//    color: #eedd82;
+}
+
+span.synConstant {
+//    color: #ffa07a;
+}
+
+span.synType {
+//    color: #ddd;
+}
+
+span.synComment {
+//    color: #ff4500;
+}
+
