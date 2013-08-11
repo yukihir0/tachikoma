@@ -1,5 +1,5 @@
 node_modules/*
-components/*
-lib/*
+dist/*
 views/*
 npm-debug.log
+*.css
